@@ -1,7 +1,7 @@
 #include <IRremote.h>
  int Pin10    =10; //VCC
  int Pin9     = 9; //GND
- int RECV_PIN = 8; 
+ int RECV_PIN = 8; //Sensor pin
 IRrecv irrecv(RECV_PIN);
 decode_results results;
 
