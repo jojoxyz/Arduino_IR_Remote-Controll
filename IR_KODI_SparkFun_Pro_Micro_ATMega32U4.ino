@@ -11,7 +11,7 @@
  int IR_GND   = 6; //GND
  int RECV_PIN = 5; //Senzor Pin
 
- int LED_PIN  = 2;
+ int LED_PIN  = 2; //Led - when button pressed
 
 IRrecv irrecv(RECV_PIN);
 decode_results results;
