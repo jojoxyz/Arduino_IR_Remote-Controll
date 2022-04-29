@@ -17,9 +17,9 @@ IRrecv irrecv(RECV_PIN);
 decode_results results;
 
 //////////////////////////// V I P E R - I R - R E M O T E////////////////////////////
-
+//            Kod from your IR Controller,   Kodi Funktion    ,    Button on your Remote Controller                      
 #define TVWind             0x10EF1AE5    //  Key  > h                   // TV     ponuka kanalov s epg
-#define ChLP               0x10EF9867    //  Key  > 0 null              // 2 P/C  predosly program
+#define ChLP               0x10EF9867    //  Key  > 0 null              // P/C  
 #define Channels           0x10EF609F    //  Key  > c                   // text   ponuka kanalov
 #define Info               0x10EF58A7    //  Key  > i                   // i+     info
 #define EPG                0x10EF6A95    //  Key  > e                   //        reproduktor links
@@ -28,7 +28,7 @@ decode_results results;
 #define OSD                0x10EF8877    //  Key  > m                   // menu
 #define PLAY               0x10EFD02F    //  Key  > space               // gelb
 //#define Stop               0x10EF926D    //  Key  > x                   // rec
-#define Stop                0x10EF18E7    //  Key  > x                   // off
+#define Stop               0x10EF18E7    //  Key  > x                   // off
 #define VOLUME_UP          0x10EFC03F    //  Key  > +  (f10)            // v+
 #define VOLUME_DN          0x10EF827D    //  Key  > -  (f9)             // v-
 #define OK                 0x10EFE817    //  Key  > return              // OK
@@ -50,8 +50,8 @@ decode_results results;
 #define  n8                0x10EF12ED    //  Key  > num8
 #define  n9                0x10EF50AF    //  Key  > num9
 #define  ChanUp            0x10EFBA45    //  Key  > pageup              // chan +
-#define  ChanDown          0x10EF42BD    //  Key  > pagedown            // chan -
-#define  PVRInfo           0x10EFA05F    //  Key  > o            // i
+#define  ChanDown          0x10EF42BD    //  Key  > pagedown            // chan - 
+#define  PVRInfo           0x10EFA05F    //  Key  > o                   // i     PVR Info
 
 
 ///////////////////////////  MEDIA PLAYER HOT KEYS   /////////////////////////////////
