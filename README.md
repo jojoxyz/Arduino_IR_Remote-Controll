@@ -24,7 +24,7 @@ Inštalácia Knižnice Arduino_IR_Remote_Master 
 https://downloads.arduino.cc/libraries/github.com/z3t0/IRremote-3.6.1.zip 
 Projekt / Zahrnúť Knižnice / Pridať ZIP Knižnicu / “Tvoje Umiestnenie stiahnutej knižnice” 
  
-IR prijímač - Centova záležitosť Je len na vás aký si zvolíte. 
+IR prijímač 38 kHz - Centova záležitosť Je len na vás aký si zvolíte. Podla typu bude prijímač viac alebo menej citlivý.
 https://www.gme.sk/tl1838 
   
 Pripojenie IR prijímača 
