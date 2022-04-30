@@ -16,30 +16,29 @@
 IRrecv irrecv(RECV_PIN);
 decode_results results;
 
-//////////////////////////// V I P E R - I R - R E M O T E////////////////////////////
-//            Kod from your IR Controller,   Kodi Funktion    ,    Button on your Remote Controller                      
-#define TVWind             0x10EF1AE5    //  Key  > h                   // TV     ponuka kanalov s epg
-#define ChLP               0x10EF9867    //  Key  > 0 null              // P/C  
-#define Channels           0x10EF609F    //  Key  > c                   // text   ponuka kanalov
-#define Info               0x10EF58A7    //  Key  > i                   // i+     info
-#define EPG                0x10EF6A95    //  Key  > e                   //        reproduktor links
-#define Back               0x10EF807F    //  Key  > backspace           // tools  naspet
+//////////////////////////// I R - R E M O T E ////////////////////////////
+//            Code from your IR Controller,   Kodi future    ,    Button on your Remote Controller 
+
+#define TVWind             0x10EF1AE5    //  Key  > h                   // TV    
+#define ChLP               0x10EF9867    //  Key  > 0                   // P/C  
+#define Channels           0x10EF609F    //  Key  > c                   // text   
+#define Info               0x10EF58A7    //  Key  > i                   // i+     
+#define EPG                0x10EF6A95    //  Key  > e                   //        
+#define Back               0x10EF807F    //  Key  > backspace           // tools  
 #define ESC                0x10EF8A75    //  Key  > esc                 // exit
 #define OSD                0x10EF8877    //  Key  > m                   // menu
-#define PLAY               0x10EFD02F    //  Key  > space               // gelb
-//#define Stop               0x10EF926D    //  Key  > x                   // rec
+#define PLAY               0x10EFD02F    //  Key  > space               // yellow
 #define Stop               0x10EF18E7    //  Key  > x                   // off
-#define VOLUME_UP          0x10EFC03F    //  Key  > +  (f10)            // v+
-#define VOLUME_DN          0x10EF827D    //  Key  > -  (f9)             // v-
+#define VOLUME_UP          0x10EFC03F    //  Key  > f10                 // v+
+#define VOLUME_DN          0x10EF827D    //  Key  > f9                  // v-
 #define OK                 0x10EFE817    //  Key  > return              // OK
-#define UP                 0x10EFD827    //  Key  > up Arrow            // hore
-#define DWN                0x10EFC837    //  Key  > Down Arrow          // dole
-#define LFT                0x10EFAA55    //  Key  > Left Arrow          // vlavo
-#define RHT                0x10EFA857    //  Key  > Right Arrow         // vpravo
+#define UP                 0x10EFD827    //  Key  > up Arrow            // up
+#define DWN                0x10EFC837    //  Key  > Down Arrow          // down
+#define LFT                0x10EFAA55    //  Key  > Left Arrow          // left
+#define RHT                0x10EFA857    //  Key  > Right Arrow         // right
 #define Mute               0x10EF5AA5    //  Key  > f8                  // mute
-#define FW                 0x10EF906F    //  Key  > f                   // blau   dopredu
-#define RW                 0x10EF10EF    //  Key  > r                   // grün   dozadu
-//#define OFF                0x10EF18E7    //  Key  > s                   // off
+#define FW                 0x10EF906F    //  Key  > f                   // blue  
+#define RW                 0x10EF10EF    //  Key  > r                   // green   
 #define  n1                0x10EF4AB5    //  Key  > num1
 #define  n2                0x10EF0AF5    //  Key  > num2
 #define  n3                0x10EF48B7    //  Key  > num3
@@ -51,14 +50,15 @@ decode_results results;
 #define  n9                0x10EF50AF    //  Key  > num9
 #define  ChanUp            0x10EFBA45    //  Key  > pageup              // chan +
 #define  ChanDown          0x10EF42BD    //  Key  > pagedown            // chan - 
-#define  PVRInfo           0x10EFA05F    //  Key  > o                   // i     PVR Info
-
+#define  PVRInfo           0x10EFA05F    //  Key  > o                   // i 
+//Add a new feature
+//#define  "new future name"           0x"new remote code"    //  Key  > o 
 
 ///////////////////////////  MEDIA PLAYER HOT KEYS   /////////////////////////////////
 // COMMANDS   press, write, releaseAll  
 
 #define TVWind_FUN         Keyboard.press('h');              Keyboard.releaseAll(); 
-#define ChLP_FUN           Keyboard.press('0');              Keyboard.releaseAll();  // null
+#define ChLP_FUN           Keyboard.press('0');              Keyboard.releaseAll(); 
 #define Channels_FUN       Keyboard.press('c');              Keyboard.releaseAll();
 #define Info_FUN           Keyboard.press('i');              Keyboard.releaseAll();
 #define EPG_FUN            Keyboard.press('e');              Keyboard.releaseAll(); 
@@ -67,8 +67,8 @@ decode_results results;
 #define OSD_FUN            Keyboard.press('m');              Keyboard.releaseAll();
 #define PLAY_FUN           Keyboard.press(' ');              Keyboard.releaseAll();
 #define Stop_FUN           Keyboard.press('x');              Keyboard.releaseAll();
-#define VOLUME_UP_FUN      Keyboard.write(KEY_F10);                                  // or + 0x5D
-#define VOLUME_DN_FUN      Keyboard.write(KEY_F9);                                   // or - 0x2F
+#define VOLUME_UP_FUN      Keyboard.write(KEY_F10);                                  
+#define VOLUME_DN_FUN      Keyboard.write(KEY_F9);                                   
 #define OK_FUN             Keyboard.press(KEY_RETURN);       Keyboard.releaseAll(); 
 #define UP_FUN             Keyboard.write(KEY_UP_ARROW);
 #define DWN_FUN            Keyboard.write(KEY_DOWN_ARROW); 
@@ -77,7 +77,6 @@ decode_results results;
 #define Mute_FUN           Keyboard.press(KEY_F8);           Keyboard.releaseAll();
 #define FW_FUN             Keyboard.press('f');              Keyboard.releaseAll();
 #define RW_FUN             Keyboard.press('r');              Keyboard.releaseAll();
-//#define OFF_FUN            Keyboard.press('s');              Keyboard.releaseAll();
 #define n1_FUN             Keyboard.press('1');              Keyboard.releaseAll();
 #define n2_FUN             Keyboard.press('2');              Keyboard.releaseAll();
 #define n3_FUN             Keyboard.press('3');              Keyboard.releaseAll();
@@ -90,7 +89,8 @@ decode_results results;
 #define ChanUp_FUN         Keyboard.press(KEY_PAGE_UP);      Keyboard.releaseAll();
 #define ChanDown_FUN       Keyboard.press(KEY_PAGE_DOWN);    Keyboard.releaseAll();
 #define PVR_Info           Keyboard.press('o');              Keyboard.releaseAll();
-
+//Add a new feature
+//#define "nev var name"           Keyboard.press(' " new keyboard key " ');              Keyboard.releaseAll();
 ///////////////////////////  SETUP //////////////////////////////////////
 void setup()
 {
@@ -133,7 +133,6 @@ void loop() {
   else if (results.value==Mute)       {Mute_FUN;     }
   else if (results.value==FW)         {FW_FUN;       }
   else if (results.value==RW)         {RW_FUN;       }   
-  //else if (results.value==OFF)        {OFF_FUN;      } 
   else if (results.value==n1)         { n1_FUN;      }
   else if (results.value==n2)         { n2_FUN;      }
   else if (results.value==n3)         { n3_FUN;      }
@@ -146,6 +145,8 @@ void loop() {
   else if (results.value==ChanUp)     { ChanUp_FUN;  }                                    
   else if (results.value==ChanDown)   { ChanDown_FUN;}
   else if (results.value==PVRInfo)    { PVR_Info;    }
+  //Add a new feature 
+  //else if (results.value== "new future name" )    { "nev var name" ;    } 
    
    Serial.println(results.value, HEX);                                            
    delay(100); 
