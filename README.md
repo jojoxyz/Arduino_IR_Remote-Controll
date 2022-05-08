@@ -12,21 +12,39 @@ Pomocou priloženého kódu si naskenujete jednotlivé tlačidlá a kódy vlož�
 Úplne jednoduchá vec a navyše sa už nebudete musieť zaoberať z Lirc a jeho konfiguráciou.  
 Či to pripojíte ku Win-PC, Linux-PC, Android alebo čokoľvek iné s USB portom a možnosťou pripojenia USB klávesnice. Všade to bude automaticky rozpoznane. Skúšal som to aj na Android TV boxe a aj na telefóne. Vždy to fungovalo. 
  
+ 
+ 
+ 
+ 
+ 
 SPARK FUN PRO MICRO ATMEGA 32U4 - cena od 7€ 
   
+  
+  
 Arduino IDE Soft na programovanie Dosky 
 https://downloads.arduino.cc/arduino-1.8.19-windows.exe 
   
+  
+  
 Inštalácia Dosky 
 https://learn.sparkfun.com/tutorials/qwiic-pro-micro-usb-c-atmega32u4-hookup-guide/setting-up-arduino 
   
+  
+  
 Inštalácia Knižnice Arduino_IR_Remote_Master 
 https://downloads.arduino.cc/libraries/github.com/z3t0/IRremote-3.6.1.zip 
-Projekt / Zahrnúť Knižnice / Pridať ZIP Knižnicu / “Tvoje Umiestnenie stiahnutej knižnice” 
+      
+    Projekt / Zahrnúť Knižnice / Pridať ZIP Knižnicu / “Tvoje Umiestnenie stiahnutej knižnice” 
  
+ 
+ 
 IR prijímač 38 kHz - Centova záležitosť Je len na vás aký si zvolíte. Podla typu bude prijímač viac alebo menej citlivý.
 https://www.gme.sk/tl1838 
   
+  
+  
 Pripojenie IR prijímača 
 https://arduinoinfo.mywikis.net/wiki/IR-RemoteControl 
-V kóde je napísané ktoré piny sú pripojene. VCC +, GND -, Senzor Pin 
+V kóde je napísané ktoré piny sú pripojene.
+
+VCC +, GND -, Senzor Pin 
